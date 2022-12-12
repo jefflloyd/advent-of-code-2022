@@ -24,7 +24,7 @@ const DISK_SIZE = 70000000;
 const FREE_SPACE_REQUIRED_FOR_UPDATE = 30000000;
 const MAX_SIZE_FOR_FILESYSTEM = DISK_SIZE - FREE_SPACE_REQUIRED_FOR_UPDATE;
 
-const filename = path.join(__dirname, '../../src/7-no-space-left-on-device/input.txt');
+const filename = path.join(__dirname, '../../src/07-no-space-left-on-device/input.txt');
 const data = fs.readFileSync(filename, 'utf-8').split('\n');
 
 const buildFilesystem = () => {

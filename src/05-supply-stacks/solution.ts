@@ -4,7 +4,7 @@ import * as fs from 'fs';
 type Crates = Array<string>;
 type Stacks = Array<Crates>;
 
-const filename = path.join(__dirname, '../../src/5-supply-stacks/input.txt');
+const filename = path.join(__dirname, '../../src/05-supply-stacks/input.txt');
 const data = fs.readFileSync(filename, 'utf-8').split('\n');
 
 const stacksForCrateMover9000: Stacks = [];

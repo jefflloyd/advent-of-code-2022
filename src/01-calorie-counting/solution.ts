@@ -1,7 +1,7 @@
 import * as path from 'path';
 import * as fs from 'fs';
 
-const filename = path.join(__dirname, '../../src/1-calorie-counting/input.txt');
+const filename = path.join(__dirname, '../../src/01-calorie-counting/input.txt');
 const data = fs.readFileSync(filename, 'utf-8').split('\n');
 
 let currentElfCalories = 0;

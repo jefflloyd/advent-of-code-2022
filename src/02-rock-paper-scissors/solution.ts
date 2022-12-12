@@ -19,7 +19,7 @@ enum NeededResult {
   Win = "Z",
 }
 
-const filename = path.join(__dirname, '../../src/2-rock-paper-scissors/input.txt');
+const filename = path.join(__dirname, '../../src/02-rock-paper-scissors/input.txt');
 const data = fs.readFileSync(filename, 'utf-8').split('\n');
 
 let totalScoreWithChoiceInterpretation = 0;

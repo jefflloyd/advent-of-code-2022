@@ -31,15 +31,15 @@ const parseStackLine = (line: string) => {
   });
 }
 
-const updateStacksForCrateMover9000 = (stacks: Stacks, numCratesToMove: number, from: number, to: number): void => {
+const updateStacksForCrateMover9000 = (numCratesToMove: number, from: number, to: number): void => {
   for (let i = 0; i < numCratesToMove; i++) {
-    const removedCrate = stacks[from].shift();
+    const removedCrate = stacksForCrateMover9000[from].shift();
     
     stacksForCrateMover9000[to].unshift(removedCrate);
   }
 };
 
-const updateStacksForCrateMover9001 = (stacks: Stacks, numCratesToMove: number, from: number, to: number): void => {
+const updateStacksForCrateMover9001 = (numCratesToMove: number, from: number, to: number): void => {
   const removedCrates: Crates = [];
 
   for (let i = 0; i < numCratesToMove; i++) {
@@ -57,8 +57,8 @@ const parseMoveCrateInstruction = (line: string) => {
   const fromStackIndex = parseInt(splitLine[3], 10) - 1;
   const toStackIndex = parseInt(splitLine[5], 10) - 1;
 
-  updateStacksForCrateMover9000(stacksForCrateMover9000, numCratesToMove, fromStackIndex, toStackIndex);
-  updateStacksForCrateMover9001(stacksForCrateMover9001, numCratesToMove, fromStackIndex, toStackIndex);  
+  updateStacksForCrateMover9000(numCratesToMove, fromStackIndex, toStackIndex);
+  updateStacksForCrateMover9001(numCratesToMove, fromStackIndex, toStackIndex);  
 };
 
 data.forEach(line => {

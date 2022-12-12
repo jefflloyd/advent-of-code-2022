@@ -34,5 +34,5 @@ data.forEach(line => {
 // Part 1:
 console.log(completelyOverlappingPairCount);
 
-// Part2:
+// Part 2:
 console.log(partiallyOverlappingPairCount);

@@ -120,5 +120,5 @@ recurseThroughDirectory(filesystem);
 // Part 1:
 console.log(sumOfSizesOfDirectoriesOfLessThanOneHundredThousand);
 
-// Part 1:
+// Part 2:
 console.log(smallestDeletableDirectorySize);

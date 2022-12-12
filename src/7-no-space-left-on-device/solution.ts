@@ -94,6 +94,9 @@ const annotateWithSizes = (directory: Directory): number => {
 };
 
 buildFilesystem();
+// we need to go through the entire filesystem once, before doing our calculations below;
+// otherwise, we won't know the root's size when deciding if deleting any given directory
+// will get us below the necessary space threshold.
 annotateWithSizes(filesystem);
 
 let sumOfSizesOfDirectoriesOfLessThanOneHundredThousand = 0;

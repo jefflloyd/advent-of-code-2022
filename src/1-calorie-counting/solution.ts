@@ -5,7 +5,7 @@ const filename = path.join(__dirname, '../../src/1-calorie-counting/input.txt');
 const data = fs.readFileSync(filename, 'utf-8').split('\n');
 
 let currentElfCalories = 0;
-let elfCalories: number[] = [];
+const elfCalories: number[] = [];
 
 data.forEach(line => {
   if (line.length) {

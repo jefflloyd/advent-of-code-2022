@@ -59,7 +59,7 @@ for (let i = 0; i < data.length; i += 7) {
 }
 
 const runMonkeyRound = (monkeys: Array<Monkey>, useSimpleWorryLevelReduction: boolean): void => {
-  const smallestCommonFactor = monkeys
+  const leastCommonMultiple = monkeys
     .map(monkey => monkey.testOperand)
     .reduce((prev, curr) => prev * curr, 1);
 
@@ -86,7 +86,7 @@ const runMonkeyRound = (monkeys: Array<Monkey>, useSimpleWorryLevelReduction: bo
       // outcome of the division, since we're scaling it in a way that's compatible with all
       // divisors the monkeys might use.
       } else {
-        itemWorryLevel = itemWorryLevel % smallestCommonFactor;
+        itemWorryLevel = itemWorryLevel % leastCommonMultiple;
       }
 
       if (itemWorryLevel % monkey.testOperand === 0) {

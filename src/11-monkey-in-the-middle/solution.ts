@@ -81,7 +81,7 @@ const runMonkeyRound = (monkeys: Array<Monkey>, useSimpleWorryLevelReduction: bo
         itemWorryLevel = Math.floor(itemWorryLevel / 3);
       // without the flat division by 3, the numbers get too large too quickly for the number
       // of rounds we're running. since we're always checking which monkey to throw to based
-      // on a division operation, we can modulo the worry level by the smallest common factor
+      // on a division operation, we can modulo the worry level by the least common multiple
       // for ALL monkeys. this effectively scales it down each iteration without changing the
       // outcome of the division, since we're scaling it in a way that's compatible with all
       // divisors the monkeys might use.

@@ -76,7 +76,7 @@ const arePacketsInCorrectOrder = (packetOne: PacketFragment, packetTwo: PacketFr
     if (Array.isArray(packetOneItem) && !Array.isArray(packetTwoItem)) {
       packetTwoItem = [packetTwoItem];
     } else if (Array.isArray(packetTwoItem) && !Array.isArray(packetOneItem)) {
-      packetOneItem = [packetOneItem]
+      packetOneItem = [packetOneItem];
     }
 
     if (Array.isArray(packetOneItem) && Array.isArray(packetTwoItem)) {

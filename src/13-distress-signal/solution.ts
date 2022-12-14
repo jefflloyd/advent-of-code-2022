@@ -28,6 +28,9 @@ const findClosingBracketPosition = (string: string): number => {
   }
 };
 
+// update: i looked at some others' solutions after finishing both parts, and realized
+// that i could use `JSON.parse` instead of writing all this crazy parsing logic. whoops!
+// leaving it the way it is because it works fine, but silly mistake on my part.
 const parsePacket = (string: string): PacketFragment => {
   const packet: PacketFragment = [];
 

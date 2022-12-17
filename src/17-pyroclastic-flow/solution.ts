@@ -137,7 +137,7 @@ const getRockTowerHeight = (numRocksToDrop: number): number => {
     let rock = rocks[rockIndex].map(coord => { return { x: coord.x, y: coord.y + 4 + maxHeight } });
 
     while (true) {
-      jetPatternOffset = jetPatternOffset % jetPattern.length
+      jetPatternOffset = jetPatternOffset % jetPattern.length;
       rock = pushRockWithGas(rock, jetPattern[jetPatternOffset] as Direction, chamber);
       jetPatternOffset++;
 
